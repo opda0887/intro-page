@@ -1,0 +1,44 @@
+.my-img {
+    width: 180px;
+    border-radius: 9999px;
+}
+
+.menu-img {
+    width: 50px;
+}
+.menu-img:hover {
+    cursor: pointer;
+}
+
+.fb img {
+    width: 140px;
+    border-radius: 9999px;
+    transition: width 0.3s;
+}
+.fb:hover img {
+    cursor: pointer;
+    width: 200px;
+    transition: width 0.3s;
+}
+
+.twitter img {
+    width: 150px;
+    border-radius: 9999px;
+    transition: width 0.3s;
+}
+.twitter:hover img {
+    cursor: pointer;
+    width: 210px;
+    transition: width 0.3s;
+}
+
+.github img {
+    width: 150px;
+    border-radius: 9999px;
+    transition: width 0.3s;
+}
+.github:hover img {
+    cursor: pointer;
+    width: 210px;
+    transition: width 0.3s;
+}
