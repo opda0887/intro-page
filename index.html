@@ -80,28 +80,28 @@
             <div class="paragraph-box">
                 <div class="side-bar">
                     <div class="side-bar-box">
-                        <p class="side-bar-text">
+                        <p class="side-bar-text" onclick="selClick()">
                             Self Intro
                         </p>
                     </div>
                     <div class="side-bar-box">
-                        <p class="side-bar-text">
+                        <p class="side-bar-text" onclick="eduClick()">
                             Education
                         </p>
                     </div>
                     <div class="side-bar-box">
-                        <p class="side-bar-text">
+                        <p class="side-bar-text" onclick="expClick()">
                             Experience
                         </p>
                     </div>
                     <div class="side-bar-box">
-                        <p class="side-bar-text">
+                        <p class="side-bar-text" onclick="proClick()">
                             Project
                         </p>
                     </div>
                 </div>
                 <div class="p-bar">
-                    <div class="p-text">
+                    <div class="p-text" id="theTextBox">
                         <p>
                             Hello, everyone:
                             <br>
@@ -121,6 +121,33 @@
                 </div>
             </div>
         </main>
+
+        <script>
+
+            let pageText = document.getElementById('theTextBox');
+
+            function selClick() {
+                pageText.innerHTML = '';
+                pageText.innerText = 'Self Intro';
+            }
+
+            function eduClick(){
+                pageText.innerHTML = '';
+                pageText.innerText = 'Education';
+            }
+
+            function expClick() {
+                pageText.innerHTML = '';
+                pageText.innerText = 'Experience';
+            }
+
+            function proClick() {
+                pageText.innerHTML = '';
+                pageText.innerText = 'Project';
+            }
+
+        </script>
+
 
     </body>
 </html>
