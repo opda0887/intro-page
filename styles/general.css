@@ -9,15 +9,15 @@ body {
     padding-top: 100px;
     padding-bottom: 100px;
 
-    background:
-        /* top, transparent black, faked with gradient */ 
+     /* background:
+        // top, transparent black, faked with gradient
         linear-gradient(
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.7)
         ),
-        /* bottom, image */
+        // bottom, image
         url("/img/purpleBackground4.jpg") no-repeat center;
 
         background-size: cover;
-
+    */
 }
