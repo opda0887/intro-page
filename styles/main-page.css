@@ -1,6 +1,6 @@
 .main-box {
     display: grid;
-    grid-template-rows: 50 1fr;
+    grid-template-rows: 50 1fr 1fr;
     display: flex;
     flex-direction: column;
     justify-content: center;
