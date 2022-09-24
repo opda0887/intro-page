@@ -14,7 +14,7 @@ body {
 
     zoom: 0.7;
 
-    background: url("https://i.imgur.com/Id75diw.jpg") center;
+    background: no-repeat url("https://i.imgur.com/Id75diw.jpg");
 
     background-size: cover;
     
