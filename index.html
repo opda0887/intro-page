@@ -11,6 +11,9 @@
         <link rel="stylesheet" href="styles/text.css">
         <link rel="stylesheet" href="styles/navigate-bar.css">
         <link rel="stylesheet" href="styles/main-paragraph.css">
+        <link rel="stylesheet" href="styles/PBox.css">
+
+        <script src="https://unpkg.com/vue@3.0.2"></script>
 
         <!-- Roboto font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -77,32 +80,32 @@
                 </div>
             </div>
 
-            <div class="paragraph-box">
+            <div class="paragraph-box" id="PBox">
                 <div class="side-bar">
                     <div class="side-bar-box">
-                        <p class="side-bar-text" onclick="selClick()">
+                        <p class="side-bar-text" @click="selControl">
                             Self Intro
                         </p>
                     </div>
                     <div class="side-bar-box">
-                        <p class="side-bar-text" onclick="eduClick()">
+                        <p class="side-bar-text" @click="eduControl">
                             Education
                         </p>
                     </div>
                     <div class="side-bar-box">
-                        <p class="side-bar-text" onclick="expClick()">
+                        <p class="side-bar-text" @click="expControl">
                             Experience
                         </p>
                     </div>
                     <div class="side-bar-box">
-                        <p class="side-bar-text" onclick="proClick()">
+                        <p class="side-bar-text" @click="proControl">
                             Project
                         </p>
                     </div>
                 </div>
                 <div class="p-bar">
                     <div class="p-text" id="theTextBox">
-                        <p>
+                        <p v-show="sel">
                             Hello, everyone:
                             <br>
                             <br> &nbsp;&nbsp;&nbsp;&nbsp;My name is Lin Sheng-Lung. You can just call me by my English name, Kiwi. Born in Kaoshung, I'm a 18-yer-old
@@ -113,6 +116,33 @@
                             my updates and follow my Facebook, Twitter, and Github.
                             <br>
                             <br> &nbsp;&nbsp;&nbsp;&nbsp;Thanks a lot.
+                        </p>
+
+                        <div class="eduBox" v-show="edu">
+                            <p>
+                                Education
+                            </p>
+                            <ul>
+                                <li v-for="data in eduDuring">
+                                    <h3>
+                                        {{data.school}}
+                                    </h3>
+                                    <p>
+                                        {{data.graduateDay}}
+                                    </p>
+                                </li>
+                            </ul>
+                            <div class="eduImg">
+                                <img class="NCKU" src="img/NCKU.jpg">
+                            </div>
+                        </div>
+
+                        <p v-show="exp">
+                            He has no related experience now.
+                        </p>
+
+                        <p v-show="pro">
+                            Project
                         </p>
                     </div>
                     <div class="p-img">
@@ -128,33 +158,7 @@
 
         </main>
 
-
-        <script>
-
-            let pageText = document.getElementById('theTextBox');
-
-            function selClick() {
-                pageText.innerHTML = '';
-                pageText.innerText = 'Hello, everyone: \n\n\xa0\xa0\xa0\xa0My name is Lin Sheng-Lung. You can just call me by my English name, Kiwi. Born in Kaoshung, I\'m a 18-yer-old college student. I\'m into playing PingPong, reading, drawing pixel arts. After graduating from senior high school, I learned "web dev" and "game dev". Both above have been my mayjor recently; therefore, I\'ll publish my works in here and they\'re free to download. \n\n\xa0\xa0\xa0\xa0Also, in my free time, I\'ll create some small progects to make my daily-life more convenient. Stay tuned for my updates and follow my Facebook, Twitter, and Github. \n\n\xa0\xa0\xa0\xa0Thanks a lot.';
-            }
-
-            function eduClick(){
-                pageText.innerHTML = '';
-                pageText.innerText = 'Education';
-            }
-
-            function expClick() {
-                pageText.innerHTML = '';
-                pageText.innerText = 'Experience';
-            }
-
-            function proClick() {
-                pageText.innerHTML = '';
-                pageText.innerText = 'Project';
-            }
-
-        </script>
-
+        <script src="controlClick.js"></script>
 
     </body>
 </html>

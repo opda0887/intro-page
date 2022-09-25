@@ -1,0 +1,13 @@
+.eduBox {
+    position: relative;
+}
+
+.eduImg {
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+}
+
+.NCKU {
+    border-radius: 6px;
+}
