@@ -51,10 +51,10 @@
                     Hello, I'm Kiwi Lin
                 </p>
             </div>
-            <div class="social-media-box">
+            <div class="social-media-box" id="SMBox">
                 <div class="social-media">
                     <div class="fb">
-                        <a href="https://www.facebook.com/profile.php?id=100012589697888">
+                        <a :href="fbUrl">
                             <img src="icons/fb-icon.png">
                         </a>
                         <p>
@@ -62,7 +62,7 @@
                         </p>
                     </div>
                     <div class="twitter">
-                        <a href="https://twitter.com/opda0887">
+                        <a :href="twitterUrl">
                             <img src="icons/twitter-icon.jpg">
                         </a>
                         <p>
@@ -70,7 +70,7 @@
                         </p>
                     </div>
                     <div class="github">
-                        <a href="https://github.com/opda0887">
+                        <a :href="githubUrl">
                             <img src="icons/github-icon.png">
                         </a>
                         <p>
@@ -141,9 +141,23 @@
                             He has no related experience now.
                         </p>
 
-                        <p v-show="pro">
-                            Project
-                        </p>
+                        <div class="proBox" v-show="pro">
+                            <p class="pro-title">
+                                My two projects:
+                            </p>
+                            <ul>
+                                <li v-for="items in projects" class="pro-innerbox">
+                                    <h3>
+                                        {{items.title}}
+                                    </h3>
+                                    <a :href="items.link" class="pro-link">
+                                        {{items.link}}
+                                    </a>
+                                </li>
+                            </ul>
+                            <img class="onlineShopImg" src="img/online-shop.png">
+                            <img class="todoImg" src="img/todo-img.png">
+                        </div>
                     </div>
                     <div class="p-img">
 
