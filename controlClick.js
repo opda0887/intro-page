@@ -28,6 +28,11 @@ const app = Vue.createApp({
             projects: [
                 {title: 'online shop opener', link: 'https://github.com/opda0887/online_shop_opener-py'},
                 {title: 'Todo (web version)', link: 'https://github.com/opda0887/Todo-web'},
+            ],
+
+            experiences: [
+                {event: '高中\"資訊研究社\" - 活動股長', inform: 'High School "Information Research Club" - Head of Activities'},
+                {event: 'engage in 2020 National Police Service Commission (NPSC)'},
             ]
         }
     },

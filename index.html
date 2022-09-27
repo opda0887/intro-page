@@ -25,10 +25,12 @@
         <main class="main-box">
             <nav class="toolbar">
                 <div class="left-section">
+                    <!--
                     <img class="menu-img" src="icons/menu.jpg">
                     <div class="menu-text">
                         Menu
                     </div>
+                    -->
                 </div>
                 
                 <div class="middle-section">
@@ -105,8 +107,8 @@
                 </div>
                 <div class="p-bar">
                     <div class="p-text" id="theTextBox">
-                        <p v-show="sel">
-                            Hello, everyone:
+                        <p v-show="sel" style="font-family: Arial; line-height: 1.6">
+                            <span style="font-size: 30px; font-weight: bold;">Hello, everyone:</span>
                             <br>
                             <br> &nbsp;&nbsp;&nbsp;&nbsp;My name is Lin Sheng-Lung. You can just call me by my English name, Kiwi. Born in Kaoshung, I'm a 18-yer-old
                             college student. I'm into playing PingPong, reading, drawing pixel arts. After graduating from senior high school, I learned "web dev" and
@@ -137,9 +139,24 @@
                             </div>
                         </div>
 
-                        <p v-show="exp">
-                            He has no related experience now.
-                        </p>
+                        <div class="expBox" v-show="exp">
+                            <p class="exp-title">
+                                Related experience
+                            </p>
+                            <ul>
+                                <li v-for="items in experiences" class="exp-innerbox">
+                                    <h3>
+                                        {{items.event}}
+                                    </h3>
+                                    <p style="margin: 0;">
+                                        {{items.inform}}
+                                    </p>
+                                </li>
+                            </ul>
+                            <img class="clubImg" src="img/coding-club.jpg">
+                            <img class="npsc" src="img/npsc.jpg">
+                        </div>
+
 
                         <div class="proBox" v-show="pro">
                             <p class="pro-title">
